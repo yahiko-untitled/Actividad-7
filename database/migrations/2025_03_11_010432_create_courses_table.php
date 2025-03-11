@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('robotics_kit');
             $table->timestamps();
         });
-    }    
+    }
+    
 
     /**
      * Reverse the migrations.
