@@ -2,40 +2,39 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Seeder;  // Asegúrate de que esta línea esté presente
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
     public function run()
     {
-        User::insert([
+        User::firstOrCreate(
+            ['email' => 'admon@robotics.com'],
             [
                 'name' => 'Admon.',
-                'email' => 'admon@robotics.com',
                 'password' => Hash::make('Adm@2022'),
                 'role' => 'admin',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'tecmilenio@robotics.com'],
             [
                 'name' => 'Tecmilenio',
-                'email' => 'tecmilenio@robotics.com',
                 'password' => Hash::make('Adm@2022'),
                 'role' => 'teacher',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'student@robotics.com'],
             [
                 'name' => 'Estudiante',
-                'email' => 'student@robotics.com',
                 'password' => Hash::make('Adm@2022'),
                 'role' => 'student',
-                'created_at' => now(),
-                'updated_at' => now(),
             ]
-        ]);
+        );
     }
 }
-
