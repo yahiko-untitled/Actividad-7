@@ -20,3 +20,6 @@ Este proyecto es una plataforma en línea para la gestión de cursos en una escu
    ```bash
    git clone https://github.com/tu_usuario/actividad7.git
    cd actividad7
+
+## Diagrama
+![diagrama](Actividad-7\images\diagrama.png)
